@@ -24,7 +24,7 @@ export default class RenderCircle{
          this.x = event.clientX - rect.left;
          this.y = event.clientY - rect.top;
          const ballInitialPosition = this.canvas.height - 60
-         const ballEndPostion = this.canvas.height - 140
+         const ballEndPostion = this.canvas.height - (this.canvas.height < 600 ? 70 : 100)  
          const directionOfSlide = [100,-100,200,-200,300,-300]
          const angle = 0
          const circle  = new Circle(
